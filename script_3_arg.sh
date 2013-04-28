@@ -1,0 +1,8 @@
+YEARS=$1
+FISIN=$2
+FISOUT=$3
+
+export OMP_SCHEDULE="dynamic"
+export OMP_NUM_THREADS=2
+export OMP_CHUNK_SIZE=1
+time ./paralel $YEARS $FISIN $FISOUT
